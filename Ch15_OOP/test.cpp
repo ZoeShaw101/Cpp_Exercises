@@ -14,8 +14,7 @@ double print_total(ostream& os, Quote& item, size_t n) {
 }
 
 int main() {
-    Quote *base = new Quote("AB123", 20);
     Bulk_quote *bulk = new Bulk_quote("AB123", 20, 5, 0.2);
-    base = bulk;
-    print_total(out, base, 10);
+    Quote &item = *bulk;
+    print_total(cout, item, 10);
 }

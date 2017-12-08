@@ -19,7 +19,9 @@ public:
         i = rhs.i;
         return *this;
     }
-    ~HasPtr() {delete ps;}
+    ~HasPtr() {delete ps; cout<< "destructor"<<endl;}
+
+    string& get_string() const {return *ps;}
 private:
     std::string *ps;
     int i;
